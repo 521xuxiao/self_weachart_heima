@@ -1,0 +1,4 @@
+<view class="totlePrice">您需要支付：{{totlePrice}}元</view>
+<view class="fixed">
+    <button type="warn" bindtap="handlePay">支付</button>
+</view>

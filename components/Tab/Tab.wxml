@@ -1,0 +1,5 @@
+<view class="tabWrap">
+    <view class="tab_item {{currentIndex === index ? 'active': ''}}" wx:for="{{giveTabs}}" wx:key="id" bindtap="handleItem" data-index="{{index}}">
+        {{item.name}}
+    </view>
+</view>

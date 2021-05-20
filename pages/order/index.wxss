@@ -1,0 +1,35 @@
+.container {
+  height: calc(100vh - 94rpx);
+}
+.container .ul .li {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+.container .ul .li:last-child {
+  border-bottom: 0;
+}
+.container .ul .li .placeImg {
+  flex: 1;
+}
+.container .ul .li .placeImg .image1 {
+  width: 90%;
+}
+.container .ul .li .nextContent {
+  flex: 3;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container .ul .li .nextContent .info {
+  font-size: 26rpx;
+  color: #999;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  padding-top: 40rpx;
+}
+.container .ul .li .nextContent .price {
+  color: var(--themeColor);
+}

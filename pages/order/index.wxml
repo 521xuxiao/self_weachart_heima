@@ -1,0 +1,32 @@
+<tab giveTabs="{{giveTab}}" currentPage="{{currentPage}}" bindtabCurrent="tabCurrent"></tab>
+<scroll-view class="container" scroll-y bindscrolltolower="scrolltolower" 
+    refresher-enabled refresher-triggered="{{refresherTriggered}}" bindrefresherrefresh="refresherrefresh">
+    <block wx:if="{{currentPage==0}}">
+        <view class="ul">
+            <view class="li" wx:for="{{dataSource}}" wx:key="goods_id">
+                <view class="placeImg" >
+                    <image class="image1" wx:if="{{item.goods_small_logo}}" src="{{item.goods_small_logo}}" mode="widthFix"></image>
+                </view>
+                <view class="nextContent">
+                    <view class="info">{{item.goods_name}}</view>
+                    <view class="price">￥ {{item.goods_price}}</view>
+                </view>
+            </view>
+        </view>
+    </block>
+
+
+    <block wx:if="{{currentPage==1}}">
+        代付款
+    </block>
+
+
+    <block wx:if="{{currentPage==2}}">
+        待收货
+    </block>
+
+
+    <block wx:if="{{currentPage==3}}">
+        退款
+    </block>
+</scroll-view>

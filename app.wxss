@@ -1,0 +1,7 @@
+@import "styles/public.wxss";
+
+page{
+  height: 100%;
+  --themeColor: #FF7043;
+  font-size: 28rpx;
+}

@@ -1,0 +1,23 @@
+<SearchInput></SearchInput>
+<tabs giveTabs="{{tabList}}" bindtabCurrent="tabCurrents" class="place_tabs"></tabs>
+
+<scroll-view class="srcoll_view" scroll-y bindscrolltolower="scrollMore" refresher-enabled bindrefresherrefresh="refresh"
+    refresher-triggered="{{isRefresher}}">
+    <view class="one" wx:if="{{currentPage===0}}">
+        <view class="out_wrap" wx:for="{{goodsList}}" wx:key="goods_id" bindtap="toDetails" data-id="{{item.goods_id}}">
+            <view class="left_img">
+                <image class="img1" src="{{item.goods_small_logo}}" mode="widthFix" lazy-load></image>
+            </view>
+            <view class="container">
+                <view class="view_p">{{item.goods_name}}</view>
+                <text class="view_price">￥ {{item.goods_price}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="one" wx:if="{{currentPage===1}}">
+        销量
+    </view>
+    <view class="one" wx:if="{{currentPage===2}}">
+        价格
+    </view>
+</scroll-view>

@@ -1,0 +1,112 @@
+page {
+  background: #f0f0f0;
+}
+.wrap_top {
+  position: relative;
+}
+.wrap_top .bg {
+  position: absolute;
+  width: 100%;
+  height: 450rpx;
+  left: 0;
+  top: 0;
+  filter: blur(6rpx);
+}
+.wrap_top .row_userInfo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120rpx;
+}
+.wrap_top .row_userInfo .avater {
+  width: 160rpx;
+  border-radius: 50%;
+}
+.wrap_top .row_userInfo .username {
+  margin-top: 20%;
+  display: block;
+  text-align: center;
+  font-size: 28rpx;
+  color: #FFF;
+  font-weight: bold;
+}
+.wrap_top .toLogin {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120rpx;
+  padding: 3rpx 12rpx;
+  border: 1rpx solid var(--themeColor);
+}
+.content {
+  position: absolute;
+  top: 430rpx;
+  width: 95%;
+  left: 2.5%;
+  padding-bottom: 20rpx;
+}
+.content .enshrine {
+  display: flex;
+  background: #fff;
+  padding: 10rpx 0;
+}
+.content .enshrine .item {
+  flex: 1;
+  text-align: center;
+}
+.content .enshrine .item .number {
+  color: var(--themeColor);
+}
+.content .enshrine .item .text {
+  font-size: 28rpx;
+  color: #666;
+}
+.content .myOrder {
+  background: #fff;
+  margin-top: 20rpx;
+  color: #666;
+}
+.content .myOrder .title {
+  border-bottom: 1rpx solid #999;
+  padding: 10rpx 20rpx;
+}
+.content .myOrder .row {
+  display: flex;
+  padding: 20rpx 0;
+}
+.content .myOrder .row .item {
+  flex: 1;
+  text-align: center;
+}
+.content .myOrder .row .item .iconfont {
+  font-size: 50rpx;
+  color: var(--themeColor);
+}
+.content .address {
+  margin-top: 20rpx;
+  background: #fff;
+  color: #666;
+  font-size: 28rpx;
+  padding: 20rpx;
+}
+.content .contact {
+  margin-top: 20rpx;
+  background: #fff;
+  color: #666;
+}
+.content .contact .contact_item {
+  overflow: hidden;
+  border-bottom: 1px solid #999;
+  padding: 10rpx 0;
+}
+.content .contact .contact_item .item_left {
+  float: left;
+  padding-left: 20rpx;
+}
+.content .contact .contact_item .item_right {
+  float: right;
+  padding-right: 20rpx;
+}
+.content .contact .contact_item:last-child {
+  border-bottom: 0;
+}

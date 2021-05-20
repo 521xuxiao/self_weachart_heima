@@ -1,0 +1,19 @@
+<SearchInput></SearchInput>
+<view class="cate_container">
+    <scroll-view class="cate_left" scroll-y scroll-top="{{scrollTop}}" scroll-with-animation>
+        <view class="cate_left_item {{currentIndex===index?'active':''}}" wx:for="{{leftMenu}}" wx:key="*this" 
+            bindtap="handleLeftMenu" data-index="{{index}}"
+            >{{item}}</view>
+    </scroll-view>
+    <scroll-view class="cate_right" scroll-y>
+        <view class="cate_right_item" wx:for="{{rightMenu}}" wx:key="cat_id" wx:for-item="outItem" wx:for-index="outIndex">
+            <view class="title">/ {{outItem.cat_name}} /</view>
+            <view class="navicate_wrap">
+                <view bindtap="navigate" data-params="{{innerItem}}" class="placeImg_item" wx:for="{{outItem.children}}" wx:key="cat_id" wx:for-item="innerItem" wx:for-index="innerIndex">
+                    <image class="image1" src="{{innerItem.cat_icon}}" mode="widthFix"></image>
+                    <text class="text1">{{innerItem.cat_name}}</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

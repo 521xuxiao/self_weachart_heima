@@ -1,0 +1,72 @@
+<view class="wrap_top">
+    <block wx:if="{{userInfo.avatarUrl}}">
+        <image class="bg" src="{{userInfo.avatarUrl}}"></image>
+        <view class="row_userInfo">
+            <image class="avater" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+            <text class="username">{{userInfo.nickName}}</text>
+        </view>     
+    </block>
+    <block wx:else>
+        <view class="toLogin" bindtap="toLogin">登录</view>
+    </block>
+</view>
+
+<view class="content">
+    <view class="enshrine">
+        <view class="item">
+            <view class="number">0</view>
+            <view class="text">收藏店铺</view>
+        </view>
+        <view class="item">
+            <view class="number">0</view>
+            <view class="text">收藏商品</view>
+        </view>
+        <view class="item">
+            <view class="number">0</view>
+            <view class="text">关注商品</view>
+        </view>
+        <view class="item">
+            <view class="number">0</view>
+            <view class="text">我的足迹</view>
+        </view>
+    </view>
+
+    <view class="myOrder">
+        <view class="title">我的订单</view>
+        <view class="row">
+            <view class="item" bindtap="toOrder" data-type="0">
+                <view class="iconfont icon-fenxiang-"></view>
+                <view class="text_my">全部订单</view>
+            </view>
+            <view class="item" bindtap="toOrder" data-type="1">
+                <view class="iconfont icon-weibiaoti19"></view>
+                <view class="text_my">代付款</view>
+            </view>
+            <view class="item" bindtap="toOrder" data-type="2">
+                <view class="iconfont icon-fenxiang-"></view>
+                <view class="text_my">待收货</view>
+            </view>
+            <view class="item" bindtap="toOrder" data-type="3">
+                <view class="iconfont icon-weibiaoti19"></view>
+                <view class="text_my">退款/退货</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="address">收货地址管理</view>
+
+    <view class="contact">
+        <view class="contact_item">
+            <view class="item_left">联系客服</view>
+            <view class="item_right">400-9800-52769</view>
+        </view>
+        <view class="contact_item">
+            <view class="item_left">意见反馈</view>
+        </view>
+        <view class="contact_item">
+            <view class="item_left">关于我们</view>
+        </view>
+    </view>
+
+    <view class="address">把应用推荐给其他人</view>
+</view>
